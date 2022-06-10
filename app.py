@@ -20,7 +20,7 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    session.clear()
+    session.clear() 
     return register_user()
 
 @app.route('/client', methods=['GET', 'POST'])
