@@ -10,32 +10,44 @@
 </head>
 
 <body>
-    <div class="RegForm animate__animated animate__fadeIn">
-        <section class="containerReg">
-            <div class="user singupBx">
-                <div class="formBx">
-                    <form method="post">
-                        <h2>Sing Up</h2>
-                        
-                        <input type="text" name="card" placeholder="N° Tarjeta" class="data" />
-                        <input type="text" name="fullname" placeholder="Nombres/Apellidos" class="data" />
-                        <input type="email" name="email" placeholder="example@gmail.com" class="data" />
-                        <input type="text" name="dni" placeholder="N° Dni" class="data" />
-                        <input type="password" name="password" placeholder="Contraseña" class="data" />
-                        <input type="submit" value="Register" class="reg-button" />
-                        <p class="signup">
-                            ¿Tienes una cuenta?
-                            <a href="./login">Inicia Sesión</a>
-                        </p>
-                    </form>
-                </div>
-                <div class="imgBxR">
-                    <div class="bubbleR">Inicia Tu Cuenta Ahora y Disfruta de los Beneficios</div>
-                    <img src="https://i.ibb.co/WPsypyY/undraw-make-it-rain-iwk4.png" alt="img" />
-                </div>
+    <section class="containerReg">
+        <div class="user singupBx">
+            <div class="logo">
+                <a href="./login">LOGO</a>
             </div>
-        </section>
-    </div>
+            <div class="imgBxR">
+                <div class="bubbleR">Inicia Tu Cuenta Ahora y Disfruta de los Beneficios</div>
+                <img src="{{ url_for('static', filename='assets/bank.svg') }}" alt="img" />
+            </div>
+            <div class="formBx">
+                <h2>Crea una Cuenta</h2>
+                <br>
+                <form method="post">
+                    <br>
+                    <div class="input_container">
+                        <div>
+                            <label>Nombres</label>
+                            <input type="text" name="fullname" placeholder="Nombres/Apellidos" class="data" />
+                        </div>
+                    </div>
+                    <label>Correo</label>
+                    <input type="email" name="email" placeholder="example@gmail.com" class="data" />
+                    <label>N° DNI</label>
+                    <input type="text" name="dni" placeholder="N° Dni" class="data" />
+                    <label>Contraseña</label>
+                    <input type="password" name="password" placeholder="Contraseña" class="data" />
+                    <p class="check"><input type="checkbox" />Crear una cuenta significa que está de acuerdo con nuestros Términos
+                        de servicio, Política de privacidad y nuestra Configuración de notificaciones
+                        predeterminada.</p>
+                    <input type="submit" value="Register" class="reg-button" />
+                    <p class="signup">
+                        ¿Tienes una cuenta?
+                        <a href="./login" style="color:#59caffa1">Inicia Sesión</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

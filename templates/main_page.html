@@ -24,7 +24,7 @@
         <li class="nav__element">
           <img
             class="nav__element-logo"
-            src="./assets/img/node.png"
+            src="{{ url_for('static', filename='assets/img/node.png') }}"
             alt="icon"
           />
         </li>
@@ -70,15 +70,18 @@
         <li class="nav__element">
           <img
             class="nav__element-from"
-            src="./assets/img/peru.png"
+            src="{{ url_for('static', filename='assets/img/peru.png') }}"
             alt="peru"
           />
         </li>
         <li class="nav__element">
-          <a class="nav__element-link" href="/">Hi, Sebastian</a>
+          <a class="nav__element-link" href="/">Hi, {{fullname}}</a>
         </li>
         <li class="nav__element">
           <a class="nav__element-link nav__element-profile" href="/">S</a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="{{ url_for('logout') }}">Salir</a>
         </li>
       </ul>
     </nav>
@@ -113,13 +116,13 @@
           </div>
         </div>
         <div class="content__stats-image">
-          <img src="./assets/img/linea.png" alt="img" />
+          <img src="{{ url_for('static', filename='assets/img/linea.png') }}" alt="img" />
         </div>
         <div class="content__stats-more">
           <div class="more__element">
             <div class="more__element-div">
               <div class="more__element-image">
-                <img src="./assets/img/java.png" alt="img" />
+                <img src="{{ url_for('static', filename='assets/img/java.png') }}" alt="img" />
               </div>
               <div class="more__element-name">
                 <h4>Top Authors</h4>
@@ -135,7 +138,7 @@
           <div class="more__element">
             <div class="more__element-div">
               <div class="more__element-image">
-                <img src="./assets/img/javascript.png" alt="img" />
+                <img src="{{ url_for('static', filename='assets/img/javascript.png') }}" alt="img" />
               </div>
               <div class="more__element-name">
                 <h4>Top Sellers</h4>
@@ -151,7 +154,7 @@
           <div class="more__element">
             <div class="more__element-div">
               <div class="more__element-image">
-                <img src="./assets/img/python.png" alt="img" />
+                <img src="{{ url_for('static', filename='assets/img/python.png') }}" alt="img" />
               </div>
               <div class="more__element-name">
                 <h4>Top Engagement</h4>

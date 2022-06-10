@@ -9,11 +9,10 @@ import time
 
 def login_user(): #Puede ser considerar solo POST
     if request.method == 'POST':
-        card = request.form['card']
         dni = request.form['dni']
         password = request.form['password']
         user = Users.query.filter_by(
-            card=card, dni=dni).first()
+            dni=dni).first()
 
         # print(user.id)
         if user and check_password_hash(user.password, password):
@@ -22,10 +21,18 @@ def login_user(): #Puede ser considerar solo POST
                                                              'face_recognition_and_liveness/face_liveness_detection/face_detector',
                                                              'face_recognition_and_liveness/face_recognition/encoded_faces.pickle',
                                                              confidence=0.5)
-            if user.fullname == detected_name and label_name == 'real':
+            print("detected_name: ",detected_name)
+            print("label_name: ",label_name)
+            print("user_dni: ", user.dni)
+            if user.dni == detected_name and label_name == 'real' and user.rol == "admin":
                 session['id'] = user.id
                 session['fullname'] = user.fullname
                 return redirect(url_for('main'))
+            elif user.dni == detected_name and label_name == 'real' and user.rol== "client":
+                session['id'] = user.id
+                session['fullname'] = user.fullname
+                print("session: ", session['id'])
+                return redirect(url_for('client'))
             else:
                 return render_template('login_page.html', invalid_user=True, username=user.fullname)
         else:
@@ -35,21 +42,20 @@ def login_user(): #Puede ser considerar solo POST
 def register_user():
     if request.method == 'POST':
         # img = request.files['image']
-        card = request.form['card']
         fullname = request.form['fullname']
         email = request.form["email"]
         dni = request.form['dni']
         password = request.form['password']
-        token = int(round(time.time() * 1000))
+        rol = "client"
         hashed_password = generate_password_hash(password, method='sha256')
         new_user = Users(fullname=fullname, email=email,
-                         dni=dni, card=card, password=hashed_password)
+                         dni=dni, password=hashed_password,rol=rol)
         print(new_user)
         db.session.add(new_user)
         db.session.commit()
         print("registradoooo")
 
-        os.mkdir(f'face_recognition_and_liveness/face_recognition/dataset/{fullname}')
+        os.mkdir(f'face_recognition_and_liveness/face_recognition/dataset/{dni}')
 
         return redirect(url_for('login'))
     return render_template('register.html')
