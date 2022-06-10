@@ -1,15 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main Page</title>
-</head>
-<body>
-    <div style="margin-top: 50px" align="center">
-        <h2>Welcome {{ id }}! Your website goes here! {{fullname}}</h2>  <br>
-        <h3>(づ｡◕‿‿◕｡)づ &nbsp; Python &nbsp; >>>>>>> &nbsp; Java &nbsp; (づ｡◕‿‿◕｡)づ</h3>
-<!--        original image size 220x275-->
-        <img width=440px height=550px src="{{url_for('static', filename='photos/python_java_meme.gif')}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/content.css') }}" />
+  </head>
+
+  <body>
+    <nav class="nav container">
+      <!-- Primary -->
+      <ul class="nav__primary">
+        <li class="nav__element">
+          <img
+            class="nav__element-logo"
+            src="./assets/img/node.png"
+            alt="icon"
+          />
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/">Dashboard</a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/">Features</a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/">Crud</a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/">Apps</a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/">Pages</a>
+        </li>
+      </ul>
+
+      <!-- Secondary -->
+      <ul class="nav__secondary">
+        <li class="nav__element">
+          <a class="nav__element-link" href="/"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/"
+            ><i class="fa-solid fa-chart-pie"></i
+          ></a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/"
+            ><i class="fa-solid fa-chart-simple"></i
+          ></a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/"
+            ><i class="fa-solid fa-cart-arrow-down"></i
+          ></a>
+        </li>
+        <li class="nav__element">
+          <img
+            class="nav__element-from"
+            src="./assets/img/peru.png"
+            alt="peru"
+          />
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link" href="/">Hi, Sebastian</a>
+        </li>
+        <li class="nav__element">
+          <a class="nav__element-link nav__element-profile" href="/">S</a>
+        </li>
+      </ul>
+    </nav>
+    <hr class="divider" />
+
+    <!-- Info -->
+    <div class="info container">
+      <div class="info__titles">
+        <h1>Dashboard</h1>
+        <ul>
+          <li class="nav__element"><i class="fa-solid fa-house"></i></li>
+          <li>Dashboard</li>
+          <li>Latest Updated</li>
+        </ul>
+      </div>
+      <div class="info__buttons">
+        <button>Reports</button>
+        <button>Actions</button>
+      </div>
     </div>
-</body>
+
+    <!-- Content -->
+    <div class="content container">
+      <div class="content__stats">
+        <div class="content__stats-heading">
+          <div>
+            <h2>Weekly Sales Stats</h2>
+            <p>890,000 sales</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+        <div class="content__stats-image">
+          <img src="./assets/img/linea.png" alt="img" />
+        </div>
+        <div class="content__stats-more">
+          <div class="more__element">
+            <div class="more__element-div">
+              <div class="more__element-image">
+                <img src="./assets/img/java.png" alt="img" />
+              </div>
+              <div class="more__element-name">
+                <h4>Top Authors</h4>
+                <p>Sebastian Yactayo</p>
+              </div>
+            </div>
+
+            <div class="more__element-price">
+              <p>+105$</p>
+            </div>
+          </div>
+
+          <div class="more__element">
+            <div class="more__element-div">
+              <div class="more__element-image">
+                <img src="./assets/img/javascript.png" alt="img" />
+              </div>
+              <div class="more__element-name">
+                <h4>Top Sellers</h4>
+                <p>Armando Perez</p>
+              </div>
+            </div>
+
+            <div class="more__element-price">
+              <p>+105$</p>
+            </div>
+          </div>
+
+          <div class="more__element">
+            <div class="more__element-div">
+              <div class="more__element-image">
+                <img src="./assets/img/python.png" alt="img" />
+              </div>
+              <div class="more__element-name">
+                <h4>Top Engagement</h4>
+                <p>Kenneth Hernan</p>
+              </div>
+            </div>
+
+            <div class="more__element-price">
+              <p>+105$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__properties">
+        <h2>Properties</h2>
+      </div>
+      <div class="content__create">
+        <div>
+          <h2>Create SaaS</h2>
+          <h2>Based Reports</h2>
+        </div>
+        <button>Create Report</button>
+      </div>
+      <div class="content__products">
+        <i class="fa-solid fa-chart-pie"></i>
+        <div>
+          <h2>790</h2>
+          <p>New Products</p>
+        </div>
+      </div>
+      <div class="content__customers">
+        <i class="fa-solid fa-users"></i>
+        <div>
+          <h2>8,600</h2>
+          <p>New Customers</p>
+        </div>
+      </div>
+      <div class="content__reports">
+        <div>
+          <h2>Create CRM Reports</h2>
+          <p>Generate the lastest CRM Report</p>
+        </div>
+
+        <button>Start Now</button>
+      </div>
+      <div class="content__app">
+        <div>
+          <h2>Create Reports</h2>
+          <h2>With App</h2>
+        </div>
+        <a href="/">
+          Create Report
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+  </body>
 </html>

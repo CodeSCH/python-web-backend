@@ -1,0 +1,269 @@
+/* Info */
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  color: #fff;
+}
+
+.info__titles h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.info__titles ul {
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+.info__titles ul li {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.info__buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.info__buttons button {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.info__buttons button:hover {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+}
+
+/* Content */
+.content {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* Content stats */
+.content__stats {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  display: grid;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content__stats-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content__stats-image {
+  display: flex;
+  justify-content: center;
+}
+
+.content__stats-image img {
+  width: 100%;
+}
+
+.content__stats-more {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.more__element {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.more__element-div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 15rem;
+  max-width: 15rem;
+}
+
+.more__element-image img {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.more__element-price {
+  background-color: rgb(235, 232, 232);
+  border-radius: 10px;
+  padding: 1px 0.5rem;
+}
+
+/* Content properties */
+.content__properties {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: grid;
+  background-image: url(https://www.republicainmobiliaria.com/wp-content/uploads/2021/02/El-rascacielos-mas-alto-del-mundo-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content__properties h2 {
+  padding-left: 2rem;
+}
+
+/* Content create */
+.content__create {
+  grid-column: 3/5;
+  grid-row: 2/3;
+  display: grid;
+  background-image: url(https://w0.peakpx.com/wallpaper/756/460/HD-wallpaper-minimalistic-shapes-dark-neon-abstract-shapes-artist-artwork-digital-art.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content__create div h2 {
+  color: #fff;
+  margin: 0;
+}
+
+.content__create button {
+  background-color: rgb(41, 199, 199);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease-out;
+  width: 40%;
+  color: #fff;
+}
+
+/* Content products */
+.content__products {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  display: grid;
+  background-color: #6a93ff;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.content__products i {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.content__products h2 {
+  color: #fff;
+  font-weight: 700;
+}
+
+.content__products p {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Content customers */
+.content__customers {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  display: grid;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.content__customers i {
+  color: #1cc6c5;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.content__customers h2 {
+  color: #000;
+  font-weight: 700;
+}
+
+.content__customers p {
+  color: #c8c8c8;
+  font-weight: bold;
+}
+
+/* Content reports */
+.content__reports {
+  grid-column: 4/7;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content__reports button {
+  background-color: rgb(75, 159, 238);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Content app */
+.content__app {
+  grid-column: 5/7;
+  grid-row: 2/4;
+  display: grid;
+  background-image: url(https://cdn1.photostockeditor.com/c/1904/space-multicolored-planet-closeup-photography-astronomy-astronomy-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 2rem;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content__app div h2 {
+  color: #fff;
+}
+
+.content__app a {
+  color: rgb(247, 213, 23);
+}
