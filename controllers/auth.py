@@ -46,7 +46,7 @@ def register_user():
         email = request.form["email"]
         dni = request.form['dni']
         password = request.form['password']
-        rol = "client"
+        rol = "admin"
         hashed_password = generate_password_hash(password, method='sha256')
         new_user = Users(fullname=fullname, email=email,
                          dni=dni, password=hashed_password,rol=rol)

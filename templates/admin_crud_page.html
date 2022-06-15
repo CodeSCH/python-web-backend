@@ -85,7 +85,7 @@
             <input type="number" value="" name="phone" maxlength="9" placeholder="+51" class="data" required />
             <input type="text" value="" name="rol" maxlength="8" placeholder="Rol" class="data" required />
           </div>
-          <input type="email" value="" name="email" maxlength="9" placeholder="Email" class="data in-add-email d-none" required />
+          <input type="email" value="" name="email" placeholder="Email" class="data in-add-email d-none" required />
           <input type="password" value="" name="password" maxlength="9" placeholder="Password" class="data in-add-pass d-none" required />
           <!-- Parte botón -->
           <input type="submit" value="Cancelar" class="cancel-button" />
@@ -102,10 +102,11 @@
         <h2>¿Estás seguro que deseas eliminar?</h2>
       </div>
       <!-- Parte botón -->
-      <div class="delete-main-button">
+      <form class="delete-main-button" method="POST">
         <button class="button-cancelar"><a>Cancelar</a></button>
-        <button class="button-eliminar"><a href="#">Eliminar</a></button>
-      </div>
+        <input type="hidden" value="">
+        <input type="submit" class="button-eliminar"><a href="">Eliminar</a></input>
+      </form>
     </div>
   </div>
   <hr class="divider" />

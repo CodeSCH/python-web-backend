@@ -9,7 +9,7 @@ class Users(db.Model):
     rol= db.Column(db.String(100))
     phone = db.Column(db.Integer)
 
-    def __init__(self, fullname, email, dni, password, rol, phone):
+    def __init__(self, fullname, email, dni, password, rol,phone): #phone
         self.fullname = fullname
         self.email = email
         self.dni = dni

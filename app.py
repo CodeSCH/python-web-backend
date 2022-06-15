@@ -93,10 +93,10 @@ def addAdmin():
         upload_path = os.path.join (f'face_recognition_and_liveness/face_recognition/dataset/{dni}', filename) 
         img.save(upload_path) #Nombre original del archivo  
 
-        newUser = Users(fullname=fullname, email=email, dni=dni, password=hashed_password, rol=rol, phone=phone)
+        newUser = Users(fullname=fullname, email=email, dni=dni, password=hashed_password, rol=rol,phone=phone)
         db.session.add(newUser)
+        print(db.session.add(newUser))
         db.session.commit()
-        db.session.close()
 
         return render_template('admin_crud_page.html', id=id, fullname=fullname, users=user)
     except Exception as e:
@@ -108,8 +108,8 @@ def deleteAdmin(idE):
     try:
         user = Users.query.all()
         #Add Admin
-        userId = Users.query.get(idE)
-        db.session.delete(userId)
+        Users.query.filter_by(id = idE).delete()
+        # db.session.delete(userId)
         db.session.commit()
 
         return render_template('admin_crud_page.html', users=user)

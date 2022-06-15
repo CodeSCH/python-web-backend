@@ -1,6 +1,6 @@
 /* PARA ABRIR EL MODAL DELETE*/
-const oprenModalDelete = document.querySelectorAll(".button-delete");
-oprenModalDelete.forEach("click", () => {
+const oprenModalDelete = document.querySelector(".button-delete");
+oprenModalDelete.addEventListener("click", () => {
     document.querySelector(".content-modal-delete").classList.toggle("open");
 });
 /* PARA CERRAR EL MODAL DELETE*/
