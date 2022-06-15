@@ -108,8 +108,8 @@ def deleteAdmin(idE):
     try:
         user = Users.query.all()
         #Add Admin
-        Users.query.filter_by(id = idE).delete()
-        # db.session.delete(userId)
+        userId = Users.query.get(idE)
+        db.session.delete(userId)
         db.session.commit()
 
         return render_template('admin_crud_page.html', users=user)
