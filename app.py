@@ -103,7 +103,7 @@ def addAdmin():
         print(e)
         return redirect(url_for('admin'))
 
-@app.route('/admin/manage/deleteEmpl/<idE>', methods=['POST'])
+@app.route('/admin/manage/deleteEmpl/<idE>')
 def deleteAdmin(idE):
     try:
         user = Users.query.all()
@@ -116,12 +116,6 @@ def deleteAdmin(idE):
     except Exception as e:
         print(e)
         return redirect(url_for('admin'))
-
-@app.route('/admin/manage/editUser/<idE>')
-def editUser(idE):
-    user = Users.query.get(idE)
-    print(user)
-    return render_template('admin_edit_user.html', user=user)
 
 """
 @app.route('/client/manage', methods=['GET', 'POST'])
