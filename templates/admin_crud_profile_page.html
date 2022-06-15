@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/crud.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/content.css') }}"/>
   </head>
@@ -29,19 +29,19 @@
           />
         </li>
         <li class="nav__element">
-          <a class="nav__element-link" href="/">Dashboard</a>
+          <a class="nav__element-link" href="/admin">Dashboard</a>
         </li>
         <li class="nav__element">
-          <a class="nav__element-link" href="/">Features</a>
+          <a class="nav__element-link" href="#">Features</a>
         </li>
         <li class="nav__element">
-          <a class="nav__element-link" href="/">Crud</a>
+          <a class="nav__element-link" href="/admin/listEmpl">Crud</a>
         </li>
         <li class="nav__element">
-          <a class="nav__element-link" href="/">Apps</a>
+          <a class="nav__element-link" href="#">Apps</a>
         </li>
         <li class="nav__element">
-          <a class="nav__element-link" href="/">Pages</a>
+          <a class="nav__element-link" href="#">Pages</a>
         </li>
       </ul>
 
@@ -100,7 +100,7 @@
     <div class="content-barra container">
       <div class="content__stats-barra">
         <div class="content__stats-more">
-          <a class="more__element-crud-button" href="./Crud.html">
+          <a class="more__element-crud-button" href="/admin/manage/listEmpl">
             <div class="more__element-crud">
               <div class="more__element-crud-div">
                 <div class="more__element-image">
@@ -113,7 +113,7 @@
               </div>
             </div>
           </a>
-          <a class="more__element-crud-button" href="./CrudConfig.html">
+          <a class="more__element-crud-button" href="/admin/manage/profile">
             <div class="more__element-crud">
               <div class="more__element-crud-div">
                 <div class="more__element-image">
@@ -162,6 +162,6 @@
         </div>
       </div>
     </div>
-    <script src="./CrudConfig.js"></script>
+    <script src="{{ url_for('static', filename='js/CrudConfig.js') }}"></script>
   </body>
 </html>

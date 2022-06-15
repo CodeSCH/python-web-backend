@@ -27,7 +27,7 @@ def login_user(): #Puede ser considerar solo POST
             if user.dni == detected_name and label_name == 'real' and user.rol == "admin":
                 session['id'] = user.id
                 session['fullname'] = user.fullname
-                return redirect(url_for('main'))
+                return redirect(url_for('admin'))
             elif user.dni == detected_name and label_name == 'real' and user.rol== "client":
                 session['id'] = user.id
                 session['fullname'] = user.fullname
@@ -53,9 +53,9 @@ def register_user():
         print(new_user)
         db.session.add(new_user)
         db.session.commit()
-        print("registradoooo")
+        print("User registrado")
 
         os.mkdir(f'face_recognition_and_liveness/face_recognition/dataset/{dni}')
 
         return redirect(url_for('login'))
-    return render_template('register.html')
+    return render_template('register_page.html')
