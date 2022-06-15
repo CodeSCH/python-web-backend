@@ -28,7 +28,7 @@
         <a class="nav__element-link" href="#">Features</a>
       </li>
       <li class="nav__element">
-        <a class="nav__element-link" href="/admin/listEmpl">Crud</a>
+        <a class="nav__element-link" href="/admin/manage/listEmpl">Crud</a>
       </li>
       <li class="nav__element">
         <a class="nav__element-link" href="#">Apps</a>
@@ -76,7 +76,7 @@
         <form action="/admin/manage/addEmpl" class="main-datos-form" method="POST" enctype="multipart/form-data">
           <!-- Parte datos -->
           <div class="main-datos-form-img">
-            <img src="{{ url_for('static', filename='assets/img/peru.png') }}" alt="img" />
+            <img src="{{ url_for('static', filename='assets/img/user.jpg') }}" alt="img" />
             <input type="file" value="" name="photo" class="data-foto" />
           </div>
           <input type="text" value="" name="fullname" maxlength="30" placeholder="Fullname" class="data" required />
@@ -186,12 +186,14 @@
                 <td>{{user.dni}}</td>
                 <td>{{user.rol}}</td>
                 <td>
-                  <button class="button-edit">
+                  <!-- <button class="button-edit">
+                    <img src="{{ url_for('static', filename='assets/img/editar.png') }}" alt="img" />
+                  </button> -->
+                  <button class="button-edit" id="id-user" >
+                    <input type="hidden" value={{user.id}} >
                     <img src="{{ url_for('static', filename='assets/img/editar.png') }}" alt="img" />
                   </button>
-                  <button class="button-delete">
-                    <img src="{{ url_for('static', filename='assets/img/eliminar.png') }}" alt="img" />
-                  </button>
+
                 </td>
               </tr>
               {% endfor %}
